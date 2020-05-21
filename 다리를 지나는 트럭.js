@@ -1,16 +1,16 @@
-var bridge_length = 2;
-var weight = 10;
-var truck_weights = [7,4,5,6];
+let bridge_length = 2;
+let weight = 10;
+let truck_weights = [7,4,5,6];
 
 document.getElementById('result').innerText = this.solution(bridge_length, weight, truck_weights);
 
 function solution(bridge_length, weight, truck_weights) {
-    var answer = 0;
+    let answer = 0;
     
-    var progTruck = [];
+    let progTruck = [];
     
     while(truck_weights.length > 0 || progTruck.length > 0){
-          var delLength = 0;
+          let delLength = 0;
         progTruck.forEach(function(item, index){
             item[1] += 1;
             if(item[1] === bridge_length){
@@ -19,7 +19,7 @@ function solution(bridge_length, weight, truck_weights) {
         })
         progTruck.splice(0,delLength);
         if(truck_weights.length > 0){
-           var progSum = 0;
+           let progSum = 0;
             progTruck.forEach(function(item, index){
                 progSum += item[0];
             })

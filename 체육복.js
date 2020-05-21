@@ -1,16 +1,16 @@
-var n = 5;
-var lost = [2, 4];
-var reserve	= [1, 3, 5];
+let n = 5;
+let lost = [2, 4];
+let reserve	= [1, 3, 5];
 
 document.getElementById('result').innerText = this.solution(n, lost, reserve);
 
 function solution(n, lost, reserve) {
-    var num = 0;
-    var lostClone = lost.slice(0);
+    let num = 0;
+    let lostClone = lost.slice(0);
     
-    for(var i=0; i<lostClone.length; i++){
-        var lentNum =-1;
-        for(var k=0; k<reserve.length; k++){
+    for(let i=0; i<lostClone.length; i++){
+        let lentNum =-1;
+        for(let k=0; k<reserve.length; k++){
             if(lostClone[i] === reserve[k]){
                lentNum = k;
                 break;
@@ -24,9 +24,9 @@ function solution(n, lost, reserve) {
                }
     
     
-    for(var i=0; i<lost.length; i++){
-        var lentNum =-1;
-        for(var k=0; k<reserve.length; k++){
+    for(let i=0; i<lost.length; i++){
+        let lentNum =-1;
+        for(let k=0; k<reserve.length; k++){
             if(lost[i]-1 === reserve[k] ||lost[i]+1 === reserve[k]){
                lentNum = k;
                 num += 1;

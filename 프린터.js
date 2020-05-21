@@ -1,16 +1,16 @@
-var priorities = [2, 1, 3, 2];
-var location = 2;
+let priorities = [2, 1, 3, 2];
+let location = 2;
 
 document.getElementById('result').innerText = this.solution(heights);
 
 function solution(priorities, location) {
-    var answer = 0;
+    let answer = 0;
     
-    var isContinue = true;
+    let isContinue = true;
     while(isContinue){
-        var target = priorities.shift();
-        var isPrint = true;
-        for(var i=0; i<priorities.length; i++){
+        let target = priorities.shift();
+        let isPrint = true;
+        for(let i=0; i<priorities.length; i++){
             if(target < priorities[i]){
                 priorities.push(target);
                 location = location ===0? priorities.length-1 : location -1;

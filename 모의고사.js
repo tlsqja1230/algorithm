@@ -1,21 +1,21 @@
-var answers = [1,2,3,4,5];
+let answers = [1,2,3,4,5];
 
 document.getElementById('result').innerText = this.solution(heights);
 
 function solution(answers) {
-    var answer = [];
+    let answer = [];
     
-    var a=0;
-    var b=0;
-    var c=0;
+    let a=0;
+    let b=0;
+    let c=0;
     answers.forEach(function(item, index){
-        var s = index+1;
+        let s = index+1;
         if((s%5 === 0 && item === 5) || (item === s%5)){
            a += 1;
         }
         
         if(s%2 === 0){
-            var k = s%8;
+            let k = s%8;
             if(k === 2 && item ===1){
                 b += 1;
             }else if(k === 4 && item ===3){
@@ -31,7 +31,7 @@ function solution(answers) {
             }
         }
         
-        var g= s%10;
+        let g= s%10;
         if((g === 1 || g === 2) && item === 3){
             c += 1;
         }else if((g === 3 || g === 4) && item === 1){
@@ -45,7 +45,7 @@ function solution(answers) {
         }
     })
     
-    var max = Math.max(a,b,c);
+    let max = Math.max(a,b,c);
     if(max === a){
        answer.push(1);
     }

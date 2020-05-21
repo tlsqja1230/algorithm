@@ -1,9 +1,9 @@
-var heights	= [6,9,5,7,4];
+let heights	= [6,9,5,7,4];
 
 document.getElementById('result').innerText = this.solution(heights);
 
 function solution(heights) {
-    var answer = [];
+    let answer = [];
     let arrLength = heights.length;
     for(let i=arrLength-1; i>=0; i--){
         let val = heights.pop(i);
